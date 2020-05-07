@@ -13,6 +13,8 @@ COPY . /app/
 
 RUN npm install
 
-CMD ["./app/run.sh"]
+RUN gatsby build 
+
+CMD ["gatsby", "serve", "-H", "0.0.0.0"]
 
 EXPOSE 9000
